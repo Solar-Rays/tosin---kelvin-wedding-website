@@ -1,0 +1,6 @@
+{
+  "name": "Tosin & Kelvin Wedding Website",
+  "description": "A wedding invitation, RSVP manager, his and her story perspectives, photo gallery, event schedule, and gift registry hub for Tosin and Kelvin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
