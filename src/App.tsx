@@ -40,9 +40,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#fdfaf6] text-[#2d2a26] font-sans antialiased flex flex-col selection:bg-[#e8d5cc] selection:text-[#2d2a26] relative overflow-x-hidden">
       {/* Ambient Soft Background Orbs matching Burgundy, Lavender & Cream */}
-      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#9c7bb5] rounded-full blur-[140px] opacity-30 pointer-events-none z-0" />
-      <div className="fixed bottom-[-10%] right-[-10%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] bg-[#2e0710] rounded-full blur-[150px] opacity-25 pointer-events-none z-0" />
-      <div className="fixed top-[40%] right-[-5%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-[#f5e6d3] rounded-full blur-[130px] opacity-40 pointer-events-none z-0" />
+      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-150 max-h-150 bg-[#9c7bb5] rounded-full blur-[140px] opacity-30 pointer-events-none z-0" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[55vw] h-[55vw] max-w-175 max-h-175 bg-[#2e0710] rounded-full blur-[150px] opacity-25 pointer-events-none z-0" />
+      <div className="fixed top-[40%] right-[-5%] w-[40vw] h-[40vw] max-w-125 max-h-125 bg-[#f5e6d3] rounded-full blur-[130px] opacity-40 pointer-events-none z-0" />
 
       {/* Navigation Header */}
       <div className="relative z-50">
@@ -53,7 +53,7 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <main className="flex-grow relative z-10">
+      <main className="grow relative z-10">
         {/* Screen 01: Hero Banner */}
         <Hero
           onRsvpClick={() => {
