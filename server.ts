@@ -301,7 +301,7 @@ app.get('/api/export-csv', (req, res) => {
   const rows = rsvpList.map((r) => [
     `"${r.id}"`,
     `"${r.fullName.replace(/"/g, '""')}"`,
-    `"${r.email.replace(/"/g, '""')}"`,
+    `"${String(r?.email || '').replace(/"/g, '""')}"`,
     `"${r.phone.replace(/"/g, '""')}"`,
     `"${r.attending}"`,
     r.guestCount,

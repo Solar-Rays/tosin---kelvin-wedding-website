@@ -33,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'details', label: 'DETAILS' },
     { id: 'gallery', label: 'GALLERY' },
     { id: 'registry', label: 'REGISTRY' },
+    { id: 'programs', label: 'PROGRAMS' },
   ];
 
   const handleNavClick = (id: string) => {

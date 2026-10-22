@@ -109,19 +109,7 @@ export const RegistrySection: React.FC = () => {
             );
           })}
         </div>
-
-        {/* Bottom Thank You Banner */}
-        <div className="mt-12 pt-8 border-t border-white/60">
-          <div className="flex items-center justify-center gap-2 text-[#58111a] mb-2">
-            <Heart className="w-5 h-5 fill-current" />
-          </div>
-          <h3 className="font-serif text-2xl text-[#1a1816] font-medium italic">
-            Thank You!
-          </h3>
-          <p className="text-xs text-[#2a241f] font-normal mt-1">
-            We are so deeply grateful for your love, support, prayers, and generosity.
-          </p>
-        </div>
+        
       </div>
     </section>
   );

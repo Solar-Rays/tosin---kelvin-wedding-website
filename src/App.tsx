@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { OurStory } from './components/OurStory';
-import { CountdownTimer } from './components/CountdownTimer';
-import { QuickInfoBar } from './components/QuickInfoBar';
-import { EventsSchedule } from './components/EventsSchedule';
-import { RsvpSection } from './components/RsvpSection';
-import { DetailsSection } from './components/DetailsSection';
-import { GallerySection } from './components/GallerySection';
-import { FullGalleryPage } from './components/FullGalleryPage';
-import { RegistrySection } from './components/RegistrySection';
-import { ThankYouModal } from './components/ThankYouModal';
-import { RsvpSubmission } from './types';
-import { COUPLE_INFO } from './data/mockData';
-import { Heart } from 'lucide-react';
+import React, { useState } from "react";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { OurStory } from "./components/OurStory";
+import { CountdownTimer } from "./components/CountdownTimer";
+import { QuickInfoBar } from "./components/QuickInfoBar";
+import { EventsSchedule } from "./components/EventsSchedule";
+import { RsvpSection } from "./components/RsvpSection";
+import { DetailsSection } from "./components/DetailsSection";
+import { GallerySection } from "./components/GallerySection";
+import { FullGalleryPage } from "./components/FullGalleryPage";
+import { RegistrySection } from "./components/RegistrySection";
+import { ProgramsSection } from "./components/ProgramsSection";
+import { ThankYouModal } from "./components/ThankYouModal";
+import { RsvpSubmission } from "./types";
+import { COUPLE_INFO } from "./data/mockData";
+import { Heart } from "lucide-react";
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'gallery'>('home');
-  const [activeSection, setActiveSection] = useState('home');
+  const [currentView, setCurrentView] = useState<"home" | "gallery">("home");
+  const [activeSection, setActiveSection] = useState("home");
   const [latestRsvp, setLatestRsvp] = useState<RsvpSubmission | null>(null);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
@@ -27,13 +28,15 @@ export default function App() {
   };
 
   const handleBackToHome = () => {
-    setCurrentView('home');
+    setCurrentView("home");
     setTimeout(() => {
-      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+      document
+        .getElementById("gallery")
+        ?.scrollIntoView({ behavior: "smooth" });
     }, 50);
   };
 
-  if (currentView === 'gallery') {
+  if (currentView === "gallery") {
     return <FullGalleryPage onBack={handleBackToHome} />;
   }
 
@@ -57,19 +60,23 @@ export default function App() {
         {/* Screen 01: Hero Banner */}
         <Hero
           onRsvpClick={() => {
-            setActiveSection('rsvp');
-            document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection("rsvp");
+            document
+              .getElementById("rsvp")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
           onExploreClick={() => {
-            setActiveSection('story');
-            document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection("story");
+            document
+              .getElementById("story")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
         />
 
         {/* Screen 01 & 02: Story, Tosin's & Kelvin's Perspectives & Timeline */}
         <OurStory
           onReadFullStory={() => {
-            setActiveSection('story');
+            setActiveSection("story");
           }}
         />
 
@@ -82,26 +89,27 @@ export default function App() {
         {/* Screen 03: Events & Schedule */}
         <EventsSchedule
           onGoToRegistry={() => {
-            setActiveSection('registry');
-            document.getElementById('registry')?.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection("registry");
+            document
+              .getElementById("registry")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
         />
 
         {/* Screen 04: RSVP Section */}
-        <RsvpSection
-          onRsvpSuccess={handleRsvpSuccess}
-        />
+        <RsvpSection onRsvpSuccess={handleRsvpSuccess} />
 
         {/* Screen 05: Details Section */}
         <DetailsSection />
 
         {/* Screen 06: Gallery Section */}
-        <GallerySection
-          onViewMore={() => setCurrentView('gallery')}
-        />
+        <GallerySection onViewMore={() => setCurrentView("gallery")} />
 
         {/* Screen 07: Registry Section */}
         <RegistrySection />
+
+        {/* Screen 08: Programs Section */}
+        <ProgramsSection />
       </main>
 
       {/* Footer */}
