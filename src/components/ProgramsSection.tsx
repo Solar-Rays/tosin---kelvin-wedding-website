@@ -207,7 +207,7 @@ export const ProgramsSection: React.FC = () => {
   const [lightboxImage, setLightboxImage] = useState<{ src: string; title: string } | null>(null);
 
   const vowCardPath = 'https://res.cloudinary.com/solarrays/image/upload/v1792708964/wedding/programs/Order_of_Service_hfxppo.jpg';
-  const receptionCardPath = 'https://res.cloudinary.com/solarrays/image/upload/t_fgfg/v1792708964/wedding/programs/Program_of_events_imr3fk.jpg';
+  const receptionCardPath = 'https://res.cloudinary.com/solarrays/image/upload/v1792708964/wedding/programs/Program_of_events_imr3fk.jpg';
 
   const currentProgram = activeTab === 'vow' ? VOW_PROGRAM : RECEPTION_PROGRAM;
   const currentCardSrc = activeTab === 'vow' ? vowCardPath : receptionCardPath;
