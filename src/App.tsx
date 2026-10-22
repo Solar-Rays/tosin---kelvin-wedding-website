@@ -11,6 +11,7 @@ import { GallerySection } from "./components/GallerySection";
 import { FullGalleryPage } from "./components/FullGalleryPage";
 import { RegistrySection } from "./components/RegistrySection";
 import { ProgramsSection } from "./components/ProgramsSection";
+import { GratitudeSection } from './components/GratitudeSection';
 import { ThankYouModal } from "./components/ThankYouModal";
 import { RsvpSubmission } from "./types";
 import { COUPLE_INFO } from "./data/mockData";
@@ -110,6 +111,9 @@ export default function App() {
 
         {/* Screen 08: Programs Section */}
         <ProgramsSection />
+        
+        {/* Screen 09: Gratitude & Thank You Section */}
+        <GratitudeSection />
       </main>
 
       {/* Footer */}
